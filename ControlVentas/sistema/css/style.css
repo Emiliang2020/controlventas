@@ -1,0 +1,522 @@
+@import url(../fonts/GothamBook.css);
+@import url(../fonts/GothamBold.css);
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #959fa5;			  
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'arial';
+	font-weight: bold;
+	letter-spacing: 1px;	
+}
+
+h1 {
+	font-size: 26px;  /* sistema de ventas */
+	color: #181515;
+}
+
+h2 {
+	font-size: 20px;	
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+h5 {
+	font-size: 14px;
+}
+
+h6 {
+	font-size: 12px;
+}
+
+p {
+	font-family: 'arial';
+	letter-spacing: 2px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+a {
+	text-decoration: none;
+	font-family: arial;
+	letter-spacing: 1px;
+}
+
+span {
+	font-family: 'GothamBook';
+	letter-spacing: 1px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+}
+
+.header {
+	color: #FFF;
+	background: #0a4661;
+	height: 35px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+.optionsBar {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.optionsBar span {
+	color: #FFF;
+	font-size: 11pt;
+	font-family: 'GothamBook';
+	text-transform: uppercase;
+	margin-left: 30px;
+}
+
+.photouser {
+	margin-left: 30px;
+	width: 25px;
+	height: 25px;
+}
+
+.close {
+	width: 25px;
+	height: 25px;
+}
+
+.optionsBar a {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	margin-left: 30px;
+}
+
+nav ul {
+	background: #550451;
+	/*background: #05817d;*/
+	list-style: none;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+nav ul>li a {
+	position: relative;
+}
+
+nav a {
+	color: #FFF;
+	display: block;
+	font-size: 10pt;
+	font-family: 'GothamBook';
+	padding: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: background .5s;
+	border-right: 1px solid #319B8F;
+}
+
+nav .principal>a {
+	background: url(../img/arrow_bottom.png) no-repeat;
+	background-position-x: 0%;
+	background-position-y: 0%;
+	background-size: auto auto;
+	background-position: 94% center;
+	background-size: 10px;
+}
+
+nav ul li:hover ul {
+	display: block;
+}
+
+nav li ul {
+	/*background: #177470;*/
+	background: #2d9872;
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	align-items: flex-start;
+	border-radius: 0 0 10px 10px;
+}
+
+nav li ul a {
+	position: relative;
+	padding: 10px 30px;
+	border-right: initial;
+}
+
+nav li ul a:hover {
+	/*background: #2c9595;*/
+	background: #147556;
+}
+
+nav li ul li:last-child {
+	border-radius: 0 0 10px 10px;
+	overflow: hidden;
+}
+
+#container {
+	padding: 90px 15px 15px;
+}
+
+/*****************************************************************/
+
+.form_register {
+	width: 450px;
+	margin: auto;
+}
+
+.form_register h1 {
+	color: #b0673c;  /* color de letra de h1 (Registro de Clientes)*/
+}
+
+hr {
+	border: 0;
+	background: #ccc;
+	height: 1px;
+	margin: 10px;
+	display: block;
+}
+
+form {
+	background: #FFF;
+	margin: auto;
+	padding: 20px 50px;
+	border: 1px solid #d1d1d1;
+}
+
+label {
+	display: block;
+	font-size: 12pt;
+	font-family: 'GothamBook';
+	margin: 15px auto 5px auto;
+}
+
+input, select {
+	display: block;
+	width: 100%;
+	font-size: 11pt;
+	padding: 5px;
+	border: 1px solid #85929e;
+	border-radius: 5px;
+	margin: 8px;
+}
+
+.btn_save {
+	font-size: 12pt;
+	background: #12a4c6;
+	padding: 15px;
+	color: #FFF;
+	letter-spacing: 1px;
+	border: 0;
+	cursor: pointer;
+	margin: 15px auto;
+}
+
+.alert {
+	width: 100%;
+	background: #3c93b0;
+	border-radius: 6px;
+	margin: 20px auto;
+}
+
+.msg_error {
+	color: #FF0000;
+}
+
+.msg_save {
+	color: rgb(127, 255, 144);
+}
+
+.alert p {
+	padding: 10px;
+}
+
+/*----------------------Lista Usuarios---------------------*/
+#container h1{	
+	font-size: 35px;
+	display: inline-block;
+}
+.btn_new{
+	display: inline-block;
+	background: #6833FF;
+	color: #ffffff;
+	padding: 5px 25px;
+	border-radius: 4px;
+	margin: 20px;
+}
+
+table{
+	border-collapse: collapse;
+	font-size:  12pt;
+	font-family: Arial;
+	width: 100%;
+}
+table th{
+	/* text-align: left; */
+	padding: 10px;
+	background: #94C0CF;
+	color: #ffffff;
+}
+table tr:nth-child(odd){ /*para el color entre registros */
+	background: #e2dfdf;	
+	}
+
+table td{
+	padding: 10px;	
+}
+.notItemOne option:first-child{
+	display: none;
+}
+.link_edit{
+    color:  #338aff
+	;
+      }
+.link_delete{
+	color: 	#FF0000;
+}
+/*------------------------ Eliminar Usuario--------------*/
+#container{
+	text-align: center;
+}
+
+.data_delete{
+   text-align: center;
+}
+.data_delete h2{
+    font-size: 12pt;
+}
+.data_delete span{
+	 font-weight: bold;
+	 color: #f5eff1;  /* color de los datos a eliminar  */
+	 font-size: 12pt;
+}
+.btn_Cancelar{
+	text-align: center;
+	width: 124pt;	
+	background: #12a4c6;
+	padding: 5px;
+	color: #FFF;
+	display: inline-block;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 15px;
+}
+.btn_Aceptar{
+	text-align: center;
+	width: 124pt;	
+	background: #12a4c6;
+	padding: 5px;
+	color: #FFF;
+	display: inline-block;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 15px;
+}
+#container form{
+	background: initial ;
+	margin: auto;
+	padding: 20px 50px;
+	border: 0;
+}
+.data_delete form{
+	background: initial ;
+	margin: auto;
+	padding: 20px 50px;
+	border: 0;
+ }
+
+ /*----------------  Buscador ---------------*/
+ .form_search{
+	 display: -webkit-flex;
+	 display: -moz-flex;
+	 display: -ms-flex;
+	 display: -o-flex;
+	 display: flex;
+	 float: right;
+	 background: initial;
+	 padding: 10px;
+	 border-radius: 10px;
+ } 
+ .form_search .btn_search{
+	 background: #1faac8;
+	 color: #ffffff;
+	 padding: 0 20px;
+	 border: 0;
+	 cursor: pointer;
+	 margin-left: 10px;
+	}
+
+/* ---------------Paginador----Usuarios----------- */	
+
+.paginador ul li{
+  display: inline-block;
+  /* float: right; */
+  color: #6533FF; 
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+}
+
+.paginador ul li:hover{
+	background: #F5EBF6;
+}
+
+.paginador ul li {
+	background:#EBF6F2;
+	font-weight:bold;
+}
+
+
+#form_add_product, #form_del_product{
+	width: 420px;
+	text-align: center;
+}
+
+
+/*============ Ventas ============*/
+.datos_cliente{
+	width: 100%;
+	max-width: 900px;
+	margin: auto;
+	margin-bottom: 20px;	
+}
+
+.datos_venta, .title_page{
+	width: 100%;
+	max-width: 900px;
+	margin: auto;
+	margin-bottom: 20px;
+}
+#detalle_venta tr{
+	background-color: #FFF !important;
+}
+#detalle_venta td{
+	border-bottom: 1px solid rgb(17, 6, 6);
+}
+tfoot{
+	border-bottom: 1px solid rgb(17, 6, 6);  /*Este código, dibuja una linea orizontal negra*/
+}
+.datos, .datos_cliente{
+	background-color: #e3ecef;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 2px solid #0e1113;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.action_cliente{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+}
+
+.datos label{
+	margin: 5px auto;
+}
+.wd10{
+	width: 15%;
+}
+.wd20{
+	width: 20%;
+}
+.wd25{
+	width: 25%;
+}
+.wd30{
+	width: 30%;
+}
+.wd40{
+	width: 40%;
+}
+.wd60{
+	width: 60%;
+}
+.wd90{
+	width: 90%;
+}
+.wd100{
+	width: 100%;
+}
+
+
+#div_registro_cliente, #add_product_venta{
+	display: none;
+}
+.display{
+	display: none;
+}
+.tbl_venta{
+	max-width: 900px;
+	margin: auto;
+}
+.tbl_venta tfoot td{
+	font-weight: bold;	
+}
+.textright{
+	text-align: right;
+}
+.textcenter{
+	text-align: center;
+}
+.textleft{
+	text-align: left;
+}/* 
+.btn_anular{
+	background-color: #d60d0d;
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 10px;
+	margin: 0 3px;
+	color: rgb(8, 8, 4);
+} */
+.btn_ok{
+	display: inline-block;
+	background: #ca3c3c;
+	color: #ffffff;
+	padding: 5px 25px;
+	border-radius: 4px;
+	margin: 20px;
+}
